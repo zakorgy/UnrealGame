@@ -11,6 +11,8 @@
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Materials/Material.h"
 
+const float BASE_MOVEMENT_SPEED = 20.0f;
+
 ASzakdogaCharacter::ASzakdogaCharacter()
 {
 	// Set size for player capsule
@@ -54,6 +56,7 @@ ASzakdogaCharacter::ASzakdogaCharacter()
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
+	m_MovementSpeed = BASE_MOVEMENT_SPEED;
 }
 
 void ASzakdogaCharacter::Tick(float DeltaSeconds)
